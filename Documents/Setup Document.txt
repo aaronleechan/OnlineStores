@@ -1,0 +1,28 @@
+// First time Set up 
+npm install --save express body-parser
+
+// Develpment Dependency Only For Nodemon
+npm install --save-dev nodemon
+
+
+
+   input CreateBusinessInput{
+        _id: ID!
+        type: String!
+        name: String!
+        address: String
+        owner: User!
+    }
+
+        input CreateUser{
+        email: String!
+        password: String!
+    }
+
+        type Business{
+        _id: ID!
+        type: String!
+        name: String!
+        address: String
+        owner: User!
+    }
