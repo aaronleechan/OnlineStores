@@ -1,5 +1,7 @@
 /node_modules
 package-lock.json
+/reactnativeFrontend/frontend/node_modules
+
 
 # testing
 /coverage
@@ -13,6 +15,7 @@ package-lock.json
 .env.development.local
 .env.test.local
 .env.production.local
+.vscode
 
 npm-debug.log*
 yarn-debug.log*
