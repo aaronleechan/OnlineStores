@@ -4,11 +4,11 @@ import { createStore,applyMiddleware } from 'redux'
 import reducers from './src/reducers'
 import firebase from 'firebase'
 import ReduxThunk from 'redux-thunk'
-// import AppNavigator from './AppNavigator'
+import AppNavigator from './AppNavigator'
 import Index from './src/components/index'
-// import { createAppContainer } from 'react-navigation'
+import { createAppContainer } from 'react-navigation'
 
-// let Navigate = createAppContainer(AppNavigator)
+let Navigate = createAppContainer(AppNavigator)
 
 export default class App extends React.Component {
 
@@ -27,7 +27,7 @@ export default class App extends React.Component {
     const store = createStore(reducers,{},applyMiddleware(ReduxThunk));
     return (
       <Provider store={store}>
-        <Index/>
+        <Navigate/>
       </Provider>
     );
   }
