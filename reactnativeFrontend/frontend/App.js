@@ -1,11 +1,14 @@
 import React from 'react';
-import Index from './src/components/index'
 import { Provider } from 'react-redux'
 import { createStore,applyMiddleware } from 'redux'
 import reducers from './src/reducers'
 import firebase from 'firebase'
 import ReduxThunk from 'redux-thunk'
+import AppNavigator from './AppNavigator'
+import Index from './src/components/index'
+import { createAppContainer } from 'react-navigation'
 
+let Navigate = createAppContainer(AppNavigator)
 
 export default class App extends React.Component {
 

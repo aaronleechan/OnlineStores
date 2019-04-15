@@ -1,7 +1,14 @@
 import firebase from 'firebase'
 import {USERNAME_CHANGE, USERPASSWORD_CHANGE,USER_SIGNIN, USER_SIGNIN_FAIL,USER_SIGNIN_SPINNER} from './types'
+import {NavigationActions, StackActions} from 'react-navigation'
 
 
+// const navigateAction = NavigationActions.navigate({
+//     routeName: 'Profile',
+//     action: NavigationActions.navigate({routeName: 'SubProfileRoute'}),
+// });
+
+// this.PaymentResponse.navigation.dispatch(navigateAction)
 
 export const ChangeusernameText = (text) => {
     return {

@@ -1,10 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { StyleSheet, Text, View, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground, Button } from 'react-native';
 import TextInputCustom from './common/text_input'
 import ButtonCustom from './common/button_custom'
 import Spinner from './common/Spinner'
 import {ChangepasswordText,ChangeusernameText,LogInUser} from '../actions'
+import {NavigationActions,NavigationAction} from 'react-navigation'
 
 class LogIn extends React.Component{
     onChangeusernameText(text){
@@ -29,7 +30,10 @@ class LogIn extends React.Component{
         }
     }
     signup(){
-        console.log("Click Sign UP");
+        console.log("Click Sign UP    ");
+    }
+    PressRow(){
+        console.log("Click Press Row  ");
     }
     renderButton(){
         if(this.props.loading){
@@ -48,7 +52,8 @@ class LogIn extends React.Component{
                 {this.renderError()}
                 <TextInputCustom placeholder="username" onChangeText={this.onChangeusernameText.bind(this)} value={this.props.username}/>
                 <TextInputCustom placeholder="password" onChangeText={this.onChangepasswordText.bind(this)} value={this.props.password}/>
-                {this.renderButton()}   
+                {this.renderButton()}
+                <Button title="Test" onPress={(this.PressRow.bind(this))} />   
             </View>
         )
     }
