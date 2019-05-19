@@ -3,8 +3,8 @@
   "expoServerPort": null,
   "packagerPort": null,
   "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null,
+  "expoServerNgrokUrl": "https://yb-u3r.aaronlichan.frontend.exp.direct",
+  "packagerNgrokUrl": "https://packager.yb-u3r.aaronlichan.frontend.exp.direct",
+  "ngrokPid": 20788,
   "webpackServerPort": null
 }

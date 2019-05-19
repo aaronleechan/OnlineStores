@@ -19,6 +19,7 @@ class LogIn extends React.Component{
         const { username,password } = this.props
         this.props.LogInUser({username,password})
     }
+
     renderError(){
         if(this.props.error){
             return(
@@ -75,7 +76,7 @@ const mapStateToProps = state =>({
 })
 
 const mapDispatchToProps = (state) =>({
-
+    
 })
 
 export default connect(mapStateToProps,{ ChangeusernameText,ChangepasswordText,LogInUser})(LogIn)

@@ -6,6 +6,7 @@ import {StyleSheet,View,TextInput} from 'react-native';
     return(
       <View style={styles.container}>
           <TextInput
+            multiline={props.multiline || false}
             style={styles.input}
             placeholder={props.placeholder}
             autoCapitalize="none"

@@ -1,0 +1,7 @@
+mutation {
+  createfood(foodInput:{name:"Spicy!! Food",price: "100", about:"Test"}){
+    name
+    price
+  }
+}
+
