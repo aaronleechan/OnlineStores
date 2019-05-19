@@ -15,6 +15,13 @@ module.exports = buildSchema(`
         owner: String!
     }
 
+    type Food{
+        _id:ID!
+        name:String!
+        price:String!
+        about:String
+    }
+
     type UserauthData{
         userId: ID!
         token: String!
@@ -33,14 +40,22 @@ module.exports = buildSchema(`
         owner: String!
     }
 
+    input FoodInput{
+        name:String!
+        price:String!
+        about:String
+    }
+
     type RootQuery{
         businesses: [Business!]!
+        food: [Food!]!
         loginuser(email: String!,password: String!): UserauthData!
     }
 
     type RootMutation{
         createuser (userInput: UserInput): User
         createbusiness (businessInput: BusinessInput): Business
+        createfood(foodInput:FoodInput):Food
     }
 
     schema{
